@@ -24,6 +24,7 @@ jobs:
     - name: Build the Docker image
       working-directory: ./1
       run: |
-        docker build . --file Dockerfile -t himalayk/accionlabs:$(date +%s)
-        docker push himalayk/accionlabs:$(date +%s)
-    - run: echo "image pushed" $(date +%s)
+        IMAGE_TAG=$(date +%s)
+        docker build . --file Dockerfile -t himalayk/accionlabs:$IMAGE_TAG
+        docker push himalayk/accionlabs:$IMAGE_TAG
+    - run: echo "image pushed" $IMAGE_TAG
