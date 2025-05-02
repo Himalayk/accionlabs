@@ -5,7 +5,7 @@ FROM nginx:1.19-alpine
 LABEL maintainer="himalayjk@example.com"
 
 # Remove default server definitions for hardening
-RUN rm -rf /etc/nginx/conf.d/*
+#RUN rm -rf /etc/nginx/conf.d/*
 
 # Copy in your custom configuration (optional and encouraged)
 # COPY nginx.conf /etc/nginx/nginx.conf
@@ -15,7 +15,7 @@ RUN chmod -R 755 /var/cache/nginx /var/run /etc/nginx \
     && chown -R nginx:nginx /var/cache/nginx /var/run /etc/nginx
 
 # Use a non-root user (nginx runs as non-root by default in official image)
-USER nginx
+USER 10015
 
 # Expose HTTP port
 EXPOSE 80
