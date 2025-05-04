@@ -11,6 +11,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      ImageTag: ${{ github.sha }}
 
     steps:
     - uses: actions/checkout@v4
@@ -24,7 +26,13 @@ jobs:
     - name: Build the Docker image
       working-directory: ./1
       run: |
-        IMAGE_TAG=$(date +%s)
-        docker build . --file Dockerfile -t himalayk/accionlabs:$IMAGE_TAG
-        docker push himalayk/accionlabs:$IMAGE_TAG
-    - run: echo "image pushed" $IMAGE_TAG
+        docker build . --file Dockerfile -t himalayk/accionlabs:${{env.ImageTag}}
+        docker push himalayk/accionlabs:${{env.ImageTag}}
+
+    - name: Install Trivy
+      uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: docker.io/himalayk/accionlabs:${{env.ImageTag}}
+        severity: CRITICAL
+        exit-code: '1'
+        ignore-unfixed: true

@@ -14,6 +14,18 @@ spec:
 
 ---
 
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: standard
+  labels:
+    addonmanager.kubernetes.io/mode: EnsureExists
+provisioner: k8s.io/minikube-hostpath
+reclaimPolicy: Delete
+volumeBindingMode: WaitForFirstConsumer
+
+---
+
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -37,7 +49,7 @@ spec:
         - name: registry-secret
       containers:
         - name: nginx
-          image: himalayk/accionlabs:1746123404  # Replace with your actual image
+          image: himalayk/accionlabs:1746197198  # Replace with your actual image
           ports:
             - containerPort: 80
               name: http
