@@ -1,5 +1,8 @@
 #!/bin/bash
 
+: ' Comments:
+    How to run :  sh ./sum-even-fibbo.sh
+'
 # Script to calculate sum of first 100 even-valued Fibonacci numbers
 
 count=0
