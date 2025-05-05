@@ -1,0 +1,19 @@
+CVE_ID,Application_Name,Policy_Name,Description
+CVE-2022-22965,CustomerPortal,SpringShell RCE,Remote code execution vulnerability in Spring Framework.
+CVE-2022-22965,BillingApp,SpringShell RCE,Remote code execution vulnerability in Spring Framework.
+CVE-2022-22965,SupportDesk,SpringShell RCE,Remote code execution vulnerability in Spring Framework.
+CVE-2021-44228,OrderService,Log4Shell,Apache Log4j vulnerability allowing remote code execution.
+CVE-2021-44228,AnalyticsEngine,Log4Shell,Apache Log4j vulnerability allowing remote code execution.
+CVE-2021-44228,OrderService,Log4Shell,Apache Log4j vulnerability allowing remote code execution.
+N/A,InventoryApp,SQL Injection Policy,Unsanitized user input allows SQL injection in product search.
+CVE-2020-0601,AccountingSystem,CryptoAPI Spoofing,Windows CryptoAPI fails to validate ECC certificates.
+CVE-2023-3824,HRPlatform,Buffer Overflow Detection,Heap buffer overflow in data export module.
+N/A,InternalTools,XSS Detection,Cross-site scripting vulnerability in admin dashboard.
+CVE-2021-26855,EmailGateway,SSRF Rule,Server-side request forgery in Microsoft Exchange.
+CVE-2024-12501,CRMTool,Weak TLS Policy,TLS 1.0 still supported—violates security baseline.
+N/A,DevOpsDashboard,Hardcoded Credentials,Hardcoded SSH key found in configuration files.
+CVE-2023-38199,APIGateway,Path Traversal,Improper sanitization allows file access via crafted URL.
+N/A,LegacyPortal,Insecure Cookie Policy,Cookies missing HttpOnly and Secure flags.
+CVE-2020-0601,MobileBanking,CryptoAPI Spoofing,Windows CryptoAPI fails to validate ECC certificates.
+CVE-2023-3824,HRPlatform,Buffer Overflow Detection,Heap buffer overflow in data export module.
+CVE-2024-12501,CRMTool,Weak TLS Policy,TLS 1.0 still supported—violates security baseline.
