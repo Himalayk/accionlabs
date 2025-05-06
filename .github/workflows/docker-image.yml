@@ -24,7 +24,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build the Docker image
-      working-directory: ./1
+      working-directory: ./1and2
       run: |
         docker build . --file Dockerfile -t himalayk/accionlabs:${{env.ImageTag}}
         docker push himalayk/accionlabs:${{env.ImageTag}}
