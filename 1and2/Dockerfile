@@ -1,8 +1,7 @@
+# Comment Dockerfile to run nginx version 1.19 in a container. Choose a base image, considering security best practices, and aim for the image to pass a container image security test
+
 # Use a minimal and secure base image
 FROM nginx:1.19-alpine
-
-# Set maintainer label
-LABEL maintainer="himalayjk@example.com"
 
 # Remove default server definitions for hardening
 #RUN rm -rf /etc/nginx/conf.d/*
